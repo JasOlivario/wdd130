@@ -28,7 +28,7 @@ nav a {
 
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
-    font-family: var(--heading-font), Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font), Verdana, Tahoma, sans-serif;
 }
 
 .button-box {
@@ -83,13 +83,13 @@ nav a:hover {
 
 .home-title {
     color: #525252;
-    font-family: var(--heading-font), Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font), Verdana, Tahoma, sans-serif;
     font-size: 2em;
     margin-top: 10px;
 }
 
 .home-grid h2 {
-    font-family: var(--heading-font), Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font), Verdana, Tahoma, sans-serif;
 }
 
 .rivers-card, .camping-card, .rapids-card {
@@ -115,7 +115,7 @@ nav a:hover {
 
 .msg h2 {
     color: #525252;
-    font-family: var(--heading-font), Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--heading-font), Verdana, Tahoma, sans-serif;
 }
 
 footer{

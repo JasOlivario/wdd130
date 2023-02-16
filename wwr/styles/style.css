@@ -43,7 +43,6 @@ nav {
     justify-content: space-around;
 }
 
-
 nav a {
     text-align: center;
     color: black;
@@ -84,11 +83,11 @@ h2 {
 header {
     display: grid;
     grid-template-columns: 150px auto;
-    background-color: #525252;
+    background-color: rgba(255,255,2550,0.2);
 }
 
 nav a:hover {
-    background-color: #525252;
+    transform: scale(1.5);
     color: #fcfbfb;
     text-decoration: underline;
 }
@@ -138,7 +137,7 @@ nav a:hover {
 }
 
 .card-img:hover{
-    opacity: 6;
+    opacity: .6;
     transform: scale(1.1);
 }
 

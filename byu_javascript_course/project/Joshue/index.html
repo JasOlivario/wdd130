@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Employee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Employee Data</h2><br>    
+  <input type="text" onkeyup="searchEmployee()" id="searchInput" class="form-control" placeholder="Search Employee">   
+  <br>  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody id="result">
+    </tbody>
+  </table>
+</div>
+<script>
+  getEmployeeData()
+  function searchEmployee(e){
+    let searchVal = document.getElementById('searchInput').value;
+    getEmployeeData(searchVal)
+  }
+
+  function getEmployeeData(search = ""){
+    let url = 'https://run.mocky.io/v3/55964f63-b7ad-4e52-93c0-10c769fec17a'
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var jsondata = JSON.parse(xhr.responseText);
+          var filterData = jsondata[Object.keys(jsondata)];
+
+          filterData = filterData.filter((key)=>{
+            return (key.firstname.toLowerCase() + " " + key.lastname.toLowerCase()).includes(search.toLowerCase()) 
+            || key.email.toLowerCase().includes(search.toLowerCase()) 
+            ||  key.phone.includes(search) 
+            ||  key.address.toLowerCase().includes(search.toLowerCase())
+          })
+
+          let tablerow = "";
+          filterData.forEach((value) => {
+            tablerow += `<tr>
+                <td>${value.id}</td>
+                <td>${value.firstname}</td>
+                <td>${value.lastname}</td>
+                <td>${value.email}</td>
+                <td>${value.phone}</td>
+                <td>${value.address}</td>
+              </tr>`
+          });
+          document.getElementById('result').innerHTML = tablerow;
+          
+        }
+        else {
+          error(xhr);
+        }
+      }
+    };
+    xhr.open('GET', url, true);
+    xhr.send();
+  }
+</script>
+</body>
+</html>

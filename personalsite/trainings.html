@@ -21,6 +21,12 @@
                     <a href="trainings.html" target="_blank">Trainings and Experiences</a>
                 </div>
             </nav>
+            <div class="progress-bar">
+                <button class="back-to-top hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="back-to-top-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+                    </svg>
+                </button>
         </header>
         <div class="hero">
             <div id="hero-box">
@@ -153,5 +159,40 @@
             </div>
         </footer>
     </div>
+    <script>
+        const showOnPx = 100;
+        const backToTopButton = document.querySelector(".back-to-top");
+        const pageProgressBar = document.querySelector(".progress-bar");
+
+        const scrollContainer = () => {
+        return document.documentElement || document.body;
+        };
+
+        const goToTop = () => {
+        document.body.scrollIntoView({
+            behavior: "smooth"
+        });
+        };
+
+        document.addEventListener("scroll", () => {
+        console.log("Scroll Height: ", scrollContainer().scrollHeight);
+        console.log("Client Height: ", scrollContainer().clientHeight);
+
+        const scrolledPercentage =
+            (scrollContainer().scrollTop /
+            (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
+            100;
+
+        pageProgressBar.style.width = `${scrolledPercentage}%`;
+
+        if (scrollContainer().scrollTop > showOnPx) {
+            backToTopButton.classList.remove("hidden");
+        } else {
+            backToTopButton.classList.add("hidden");
+        }
+        });
+
+        backToTopButton.addEventListener("click", goToTop);
+    </script>
 </body>
 </html>

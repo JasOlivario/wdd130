@@ -16,6 +16,7 @@ header {
     margin-top: -10px;
 }
 
+
 .logo {
     width: 60px;
     float: left;
@@ -235,4 +236,46 @@ footer p {
 
 footer .social img {
     padding-top: 15px;
+}
+
+HTML CSS JSResult Skip Results Iframe
+EDIT ON
+body {
+  height: 5000px;
+  background: linear-gradient(#00ff04, #09aad3);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 100%;
+  background: #141c38;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+
+.back-to-top:hover {
+  opacity: 60%;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.back-to-top-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #549C8C;
+}
+
+.progress-bar {
+  height: 1rem;
+  background: #549C8C;
+  position: fixed;
+  top: 0;
+  left: 0;
 }

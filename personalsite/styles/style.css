@@ -231,7 +231,7 @@ footer a {
 
 footer p {
     font-size: 1.2em;
-    font-family: var(--paragraph-font) Arial, Helvetica, sans-serif;
+    font-family: var(--paragraph-font), Arial, Helvetica, sans-serif;
 }
 
 footer .social img {

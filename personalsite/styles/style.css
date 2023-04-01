@@ -112,10 +112,26 @@ main {
 
 main h2 {
     font-family: var(--heading-font), Verdana, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+main div h2 {
+    margin: 0;
+}
+
+main h3 {
+    font-family: var(--paragraph-font), Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+main li {
+    font-family: var(--paragraph-font), Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 main p {
-    font-family: var(--paragraph-font), Arial, Hcelvetica, sans-serif;
+    font-family: var(--paragraph-font), Arial, Helvetica, sans-serif;
     font-size: 30px;
 }
 
@@ -127,9 +143,9 @@ main p {
 
 .top-paragraph{
     grid-column: 1/2;
-    margin: 100px 80px;
-    width: 600px;
+    margin-left: 100px;
     text-align: center;
+    padding: 80px 0;
 }
 
 .top-img{
@@ -139,9 +155,9 @@ main p {
 
 .middle-paragraph {
     grid-column: 2/3;
-    margin: 100px 80px;
+    margin-right: 100px;
     text-align: center;
-    width: 600px;
+    padding: 80px 0;
 }
 
 .middle-img {
@@ -152,9 +168,9 @@ main p {
 
 .third-paragraph {
     grid-column: 1/2;
-    margin: 100px 80px;
-    width: 600px;
+    margin-left: 100px;
     text-align: center;
+    padding: 80px 0;
 }
 
 .third-img{
@@ -165,42 +181,16 @@ main p {
 
 .fourth-paragraph {
     grid-column: 2/3;
-    margin: 100px 80px;
+    grid-row: 4/5;
+    margin-right: 100px;
     text-align: center;
-    width: 600px;
+    padding: 80px 0;
 }
 
 .fourth-img {
     grid-column: 1/2;
     grid-row: 4/5;
     margin: 0 auto;
-}
-
-.fifth-paragraph {
-    grid-column: 1/2;
-    margin: 100px 80px;
-    width: 600px;
-    text-align: center;
-}
-
-.sixth-paragraph {
-    grid-column: 2/3;
-    margin: 100px 80px;
-    width: 600px;
-    text-align: center;
-}
-
-.sixth-img {
-    grid-column: 1/2;
-    grid-row: 6/7;
-    margin: 0 auto;
-}
-
-.seventh-paragraph {
-    grid-column: 1/2;
-    margin: 100px 80px;
-    width: 600px;
-    text-align: center;
 }
 
 .bottom-row {
@@ -211,6 +201,105 @@ main p {
 
 .bottom-row h1 {
     font-family: var(--heading-font), Verdana, Tahoma, sans-serif;
+}
+
+.training-line{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 3%;
+  }
+
+.line1-paragraph {
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.line1-img {
+    grid-column: 2/3;
+    margin: 0 auto;
+}
+
+.education-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 3%;
+}
+
+.line2-paragraph {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.line2-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0 auto;
+}
+
+.line3-paragraph {
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.line3-img {
+    grid-column: 2/3;
+    margin: 0 auto;
+}
+
+.experiences-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 3%;
+}
+
+.line4-paragraph {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.line4-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0 auto;
+}
+
+.line5-paragraph {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+}
+
+.line5-img {
+    grid-column: 2/3;
+    margin: 0 auto;
+}
+
+.volunteer-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 3%;
+}
+
+.line6-paragraph {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.line6-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 0 auto;
+}
+
+.line7-paragraph {
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.line7-img {
+    grid-column: 2/3;
+    margin: 0 auto;
+
 }
 
 footer{
@@ -236,6 +325,11 @@ footer p {
 
 footer .social img {
     padding-top: 15px;
+}
+
+footer p a:hover{
+    color: #c0c0c0;
+    text-decoration: underline;
 }
 
 HTML CSS JSResult Skip Results Iframe
